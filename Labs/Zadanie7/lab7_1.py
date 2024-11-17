@@ -1,14 +1,16 @@
-array = []
-countArray = 6
+# array = [2,4,6,8,16,3,5,7,9]
+array = [int(input("Ввод циферок: \n")) for num in range(8)]
 
-for i in range(countArray):
-    array.append(int(input()))
+max = array[0]
+for item in array: 
+    if item > max: max = item
+print(f"Максимальный элемент массива: {max}") 
 
-number = 0
-for i in array:
-    if(abs(i) < i+1): 
-      number = i
-      print(number)
+# array.reverse()
 
-array.reverse()
-print(number)
+newArray = [num for num in array[::-1]]
+print(newArray)
+    
+   
+    
+
